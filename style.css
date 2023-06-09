@@ -1,0 +1,155 @@
+:root {
+    --clr-primary-100: hsl(215, 51%, 70%);
+    --clr-primary-accent: hsl(178, 100%, 50%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(215, 32%, 27%);
+    --clr-neutral-300: hsl(216, 50%, 16%);
+    --clr-neutral-400: hsl(217, 54%, 11%);
+    
+    --ff: 'Outfit', sans-serif;
+
+    --fs-p: 18px;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--clr-neutral-400);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ntf-component {
+    background-color: var(--clr-neutral-300);
+    width: 350px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    padding: 1.25rem 1rem;
+    border-radius: 1rem;
+    color: var(--clr-primary-100);
+}
+
+.ntf-img {
+    position: relative;
+    /* width: 300px; */
+}
+.ntf-img > img {
+    /* margin-top: 1rem; */
+    width: 310px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: var(--clr-primary-accent);
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-accent);
+    cursor: pointer;
+}
+
+.ntf-img:hover .overlay {
+    opacity: 0.5;
+}
+
+.ntf-description {
+    border-bottom: 1px solid var(--clr-neutral-200);
+    padding: 1rem;
+}
+
+.ntf-description h1 {
+    font-size: 1.35rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-neutral-100);
+}
+
+.ntf-description a {
+    text-decoration: none;
+}
+
+.ntf-description h1:hover {
+    color: var(--clr-primary-accent);
+}
+
+.ntf-description p {
+    padding: 0.75rem 0;
+    font-size: var(--fs-p);
+    line-height: 1.6;
+}
+
+.ntf-pricing {
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ntf-pricing div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.ntf-price{
+    color: var(--clr-primary-accent);
+}
+
+.ntf-creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.ntf-creator img {
+    width: 15%;
+}
+
+.ntf-creator a{
+    color: var(--clr-neutral-100);
+    text-decoration: none;
+}
+
+.ntf-creator a:hover, .ntf-creator a:focus{
+    color: var(--clr-primary-accent);
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
